@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+.container-photo{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+nav{
+    background:rgb(236,110, 110);
+}
+.nav-con{
+    background:rgb(236,110, 110);
+    color: aliceblue;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    align-items: center;
+}
+ul.Menu{
+    overflow: hidden;
+    display: flex;
+    list-style: none; /*ลบจุดหน้าลิงค์*/
+}
+ul.Menu li{
+    margin-left: 1rem;
+}
+ul.Menu li a{
+    color: aliceblue;
+    text-decoration: none; 
+    position: relative;
+    display: block;
+    transition: 0.7s all;
+    text-transform: uppercase;
+}
+ul.Menu li a::before{
+    content: '';
+    width: 40px;
+    position: absolute;
+    border-bottom: 2px solid white;
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+}
+ul.Menu li a:hover:before{
+    right: 0;
+}
+header{
+    height: 400px;
+    overflow: hidden;/*ใส่เมื่อเราเจอปัญหาที่เมื่อเราใช้ margintop ที่ srction ใน header*/
+    background: url('M1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-info{ /*ที่ใช้ > เพราะต้องการเข้าถึง section ของ header หรือ จะกำหนด class ให้ scetion ก็ได้*/ 
+    width: 500px;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    color:  white;
+    text-align: left;
+}
+.header-info h1{
+    
+    font-size: 3rem;
+}
+.header-info p{
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+.header-info a{
+    border-radius: 25px;
+    color: white;
+    border: 1px solid white;
+    padding: .5rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+}
+.header-info a:hover{
+    background-color: black;
+    border: 1px solid black;
+}
+main{
+    padding: 3rem 0;
+
+}
+main h1{
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.picture{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+.picture figure img{
+    width: 100%;
+    height: 300px;
+    -webkit-filter:grayscale(50%);
+    filter: grayscale(50%);
+}
+.picture figure img:hover{
+    filter: none;
+}
+.photo{
+    overflow: hidden;
+    border:  solid ;
+    font-family: Arial;
+    margin-bottom: 10px;
+    background-position: center;
+    background: url('M3.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+}
+.photo-info{
+    position: absolute;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    vertical-align: text-bottom;
+    bottom: -81%;
+}
+.photo-info h1{
+    margin: 0 2rem;
+    padding-top: 20px;
+    font-size: 3rem;
+}
+.photo-info p{
+    margin: 1rem 2rem;
+    line-height: 1.5;
+}
+.photo-info a{
+    margin: 0 2rem;
+    color: white;
+    border: 2px solid white;
+    padding: .5rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.photo-info a:hover{
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+footer{
+    background:rgb(236,110, 110);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+
+}
